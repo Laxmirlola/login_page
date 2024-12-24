@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background-image: url(./assests/img3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: change 50s infinite ease-in-out;
+}
+
+.wrapper {
+  overflow: hidden;
+
+  max-width: 800px;
+  padding: 40px;
+  border-radius: 2rem;
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0.5, 0.5);
+}
+
+.wrapper .title-text {
+  display: flex;
+  width: 200%;
+}
+
+.wrapper .title-text .title {
+  overflow: hidden;
+  width: 50%;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.5s cubic-bezier(0.68, -0.45, 0.255, 1.55);
+}
+
+.form-container .slide-control {
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 99%;
+  border-radius: 5px;
+  margin: 30px 0 10px 0;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+}
+
+.slide-control .slide {
+  height: 100%;
+  width: 99%;
+  padding-left: 45px;
+  z-index: 1;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  /* margin-left: 10%; */
+  /* align-self: center; */
+  line-height: 50px;
+  transition: all 0.6s ease;
+  cursor: pointer;
+}
+
+.slide-control .slide-tab {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: 0;
+  border-radius: 8px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265s, 1.55);
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+}
+input[type="radio"] {
+  display: none;
+}
+#signup:checked ~ .slide-tab {
+  left: 50%;
+}
+#signup:checked ~ .signup {
+  color: #fff;
+}
+#signup:checked ~ .login {
+  color: #000;
+}
+
+.slide-control .signup {
+  color: #000;
+}
+
+.wrapper .form-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.form-container .form-inner {
+  display: flex;
+  width: 200%;
+}
+
+.form-container .form-inner form {
+  width: 50%;
+  transition: all 0.5s cubic-bezier(0.68, -0.45, 0.255, 1.55);
+}
+
+.form-inner form .field {
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  /* padding: 5px; */
+}
+
+.form-container .form-inner .field input {
+  height: 100%;
+  width: 99%;
+  outline: none;
+
+  /* padding-left: 15px; */
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid black;
+  border-bottom-width: 3px;
+  transition: all 0.4s ease;
+}
+
+.form-inner form .pass-link {
+  margin-top: 5px;
+}
+
+.form-inner form .field input:focus {
+  border-color: #a445b2;
+}
+
+.form-inner form .pass-link a,
+.form-inner form .signup-link a {
+  color: beige;
+  text-decoration: none;
+}
+
+.form-inner form .signup-link {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover {
+  text-decoration: underline;
+}
+
+form .field input[type="submit"] {
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  border: none;
+  cursor: pointer;
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+}
+/* color-- #a445b2, #fa4299 */
+
+@keyframes change {
+  0% {
+    background-image: url(./assests/img4.jpg);
+  }
+  20% {
+    background-image: url(./assests/img5.jpg);
+  }
+  40% {
+    background-image: url(./assests/img6.jpg);
+  }
+  60% {
+    background-image: url(./assests/img11.jpg);
+  }
+  80% {
+    background-image: url(./assests/img1.webp);
+  }
+  100% {
+    background-image: url(./assests/img2.avif);
+  }
+}
